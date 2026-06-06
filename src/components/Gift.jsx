@@ -1,123 +1,140 @@
+import { listbank, listKado } from '../data'; 
 import { useState } from 'react';
 
 export default function Gift() {
-  const [copiedIndex, setCopiedIndex] = useState(null);
+  const [copiedId, setCopiedId] = useState(null);
+  const [copiedKadoId, setCopiedKadoId] = useState(null);
 
-  // Data rekening dan e-wallet mempelai
-  // Silakan ganti nama, bank, dan nomor rekening sesuai kebutuhan Anda
-  const giftAccounts = [
-    {
-      id: 1,
-      tipe: 'Bank Mandiri',
-      nomor: '157000xxxxxx',
-      atasNama: 'Nama Mempelai Pria',
-      logo: '💳'
-    },
-    {
-      id: 2,
-      tipe: 'Bank BCA',
-      nomor: '8690xxxxxx',
-      atasNama: 'Nama Mempelai Wanita',
-      logo: '🏦'
-    },
-    {
-      id: 3,
-      tipe: 'E-Wallet DANA / OVO',
-      nomor: '081234567890',
-      atasNama: 'Nama Mempelai',
-      logo: '📱'
-    }
-  ];
+  const handleCopy = (nomor, id) => {
+    navigator.clipboard.writeText(nomor);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
+  };
 
-  // Fungsi menyalin teks nomor rekening ke clipboard secara otomatis
-  const handleCopy = (text, index) => {
-    navigator.clipboard.writeText(text);
-    setCopiedIndex(index);
-    
-    // Reset tulisan "Tersalin" setelah 2 detik
-    setTimeout(() => {
-      setCopiedIndex(null);
-    }, 2000);
+  const handleCopyAlamat = (alamat, id) => {
+    navigator.clipboard.writeText(alamat);
+    setCopiedKadoId(id);
+    setTimeout(() => setCopiedKadoId(null), 2000);
   };
 
   return (
-    <section className="py-20 px-6 bg-white text-center space-y-12">
+    <section id="gift-section" className="w-full py-16 px-6 bg-stone-50 select-none text-center">
       
-      {/* Header Section */}
-      <div className="text-center space-y-3 max-w-sm mx-auto">
-        <h3 className="font-serif text-3xl text-stone-800 font-medium">
-          Tanda Kasih
-        </h3>
-        <span className="text-xs tracking-[0.25em] text-stone-400 uppercase block font-semibold">
-          WEDDING GIFT
-        </span>
-        <div className="w-12 h-1px bg-stone-300 mx-auto mt-2"></div>
-        <p className="text-xs text-stone-500 leading-relaxed font-light px-4">
-          Bagi bapak/ibu/saudara yang ingin mengirimkan hadiah atau tanda kasih secara digital, dapat melalui rekening atau dompet digital di bawah ini:
+      {/* ================= HEADER JUDUL ================= */}
+      <div className="space-y-2 mb-12">
+        <h2 className="font-serif text-3xl text-stone-700 italic">Wedding Gift</h2>
+        <p className="text-xs text-stone-500 max-w-xs mx-auto leading-relaxed">
+          Bagi Bapak/Ibu/Saudara/i yang ingin mengirimkan tanda kasih, dapat melalui opsi di bawah ini:
         </p>
       </div>
 
-      {/* Grid Box Rekening-Rekening */}
-      <div className="max-w-md mx-auto grid grid-cols-1 gap-6">
-        {giftAccounts.map((account, index) => (
-          <div 
-            key={account.id} 
-            className="bg-[#faf8f5] border border-stone-200/60 p-6 rounded-2xl shadow-2xs space-y-4 text-left transition-all hover:border-stone-300 hover:shadow-xs relative overflow-hidden"
-          >
-            {/* Baris Atas: Logo & Nama Bank */}
-            <div className="flex justify-between items-center border-b border-stone-200/40 pb-3">
-              <div className="flex items-center gap-2">
-                <span className="text-xl">{account.logo}</span>
-                <span className="text-sm font-bold text-stone-700 tracking-wide uppercase">
-                  {account.tipe}
-                </span>
-              </div>
-              <span className="text-[10px] bg-stone-200/50 text-stone-500 font-semibold px-2 py-0.5 rounded-md">
-                Digital Card
-              </span>
-            </div>
-
-            {/* Baris Tengah: Info Nomor Rekening & Nama Pemilik */}
-            <div className="space-y-1">
-              <span className="text-[10px] text-stone-400 font-semibold tracking-wider block uppercase">
-                Nomor Rekening / HP
-              </span>
-              <p className="font-mono text-xl font-bold text-stone-800 tracking-wider">
-                {account.nomor}
-              </p>
-              <p className="text-xs text-stone-500 italic font-light mt-1">
-                a.n. {account.atasNama}
-              </p>
-            </div>
-
-            {/* Tombol Aksi Salin / Copy Instan */}
-            <button
-              onClick={() => handleCopy(account.nomor, index)}
-              className={`w-full py-2.5 rounded-xl text-xs font-bold tracking-widest uppercase shadow-2xs transition-all duration-200 active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2 ${
-                copiedIndex === index 
-                  ? 'bg-emerald-600 text-white' 
-                  : 'bg-stone-800 hover:bg-stone-900 text-white'
-              }`}
+      <div className="max-w-sm mx-auto space-y-10">
+        
+        {/* ================= SEKSI BANK / DOMPET DIGITAL ================= */}
+        <div className="space-y-4">
+          
+          {listbank.map((bank) => (
+            <div 
+              key={bank.id} 
+              className="p-5 bg-white border border-stone-200/60 rounded-2xl shadow-sm flex flex-col items-center space-y-3"
             >
-              {copiedIndex === index ? (
-                <>
-                  <svg className="w-3.5 h-3.5 fill-current animate-bounce" viewBox="0 0 20 20">
-                    <path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/>
-                  </svg>
-                  Tersalin!
-                </>
-              ) : (
-                <>
-                  <svg className="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
-                  </svg>
-                  Salin Rekening
-                </>
+              {bank.logo && (
+                <img 
+                  src={bank.logo} 
+                  alt={bank.tipe} 
+                  className="h-7 object-contain opacity-90"
+                />
               )}
-            </button>
-          </div>
-        ))}
+
+              <div className="space-y-1">
+                <p className="text-[10px] font-bold text-stone-400 uppercase tracking-wider">{bank.tipe}</p>
+                <p className="font-mono text-lg font-bold text-stone-800 tracking-wide">{bank.nomor}</p>
+                <p className="text-xs text-stone-600 font-medium">a.n. {bank.atasNama}</p>
+              </div>
+
+              {/* Tombol Salin Ber-Ikon */}
+              <button
+                onClick={() => handleCopy(bank.nomor, bank.id)}
+                className={`px-4 py-2 rounded-xl text-xs font-semibold tracking-wide transition-all duration-300 w-full max-w-140px flex items-center justify-center space-x-1.5 cursor-pointer ${
+                  copiedId === bank.id 
+                    ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/10' 
+                    : 'bg-stone-900 hover:bg-stone-700 text-stone-200 active:scale-95'
+                }`}
+              >
+                {copiedId === bank.id ? (
+                  <>
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Tersalin</span>
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                    </svg>
+                    <span>Salin</span>
+                  </>
+                )}
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* ================= SEKSI ALAMAT KADO FISIK ================= */}
+        <div className="space-y-4">
+          {listKado.map((kado) => (
+            <div 
+              key={kado.id} 
+              className="p-5 bg-white border border-stone-200/60 rounded-2xl shadow-sm flex flex-col items-center text-center space-y-3"
+            >
+              {kado.logo && (
+                <img 
+                  src={kado.logo} 
+                  alt="Ikon Kado" 
+                  className="h-30 object-contain opacity-90" 
+                />
+              )}
+
+              <div className="space-y-1">
+                <div className="flex items-center text-center justify-center border-b border-stone-100 pb-2">
+                  <span className="text-xs font-bold text-stone-700 uppercase tracking-wide">Alamat Kado</span>
+                </div>
+
+                <p className="text-xs text-stone-600 leading-relaxed bg-stone-50 p-4 rounded-xl border border-stone-100 font-sans">
+                  {kado.alamatKado}
+                </p>
+              </div>
+
+              {/* Tombol Salin Alamat Ber-Ikon */}
+              <button
+                onClick={() => handleCopyAlamat(kado.alamatKado, kado.id)}
+                className={`px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wide transition-all duration-300 w-full flex items-center justify-center space-x-2 cursor-pointer ${
+                  copiedKadoId === kado.id 
+                    ? 'bg-emerald-600 text-white shadow-md' 
+                    : 'bg-stone-900 hover:bg-stone-700 text-stone-200 active:scale-95'
+                }`}
+              >
+                {copiedKadoId === kado.id ? (
+                  <>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Tersalin</span>
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                    <span>Salin Alamat</span>
+                  </>
+                )}
+              </button>
+            </div>
+          ))}
+        </div>
+
       </div>
 
     </section>

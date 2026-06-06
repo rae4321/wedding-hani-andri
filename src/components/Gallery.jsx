@@ -10,8 +10,7 @@ export default function Gallery() {
   return (
     <section className="py-16 px-6 bg-white text-center space-y-8">
       <div className="space-y-2">
-        <h3 className="font-serif text-3xl text-stone-700">Galeri Bahagia</h3>
-        <span className="text-xs tracking-[0.2em] text-stone-400 uppercase block font-medium">Our Moments</span>
+        <h3 className="font-serif text-3xl text-stone-700">Our Moments</h3>
       </div>
 
       {/* Grid Layout Responsif ala Pinterest Mini */}

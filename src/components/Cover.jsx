@@ -24,7 +24,7 @@ export default function Cover({ guestName, onOpen }) {
       <div className="my-auto space-y-6 z-10 w-full max-w-sm">
         {/* Nama Pengantin dibuat putih cerah agar kontras dengan foto */}
         <h1 className="font-serif text-5xl text-white italic tracking-wide drop-shadow-lg">
-          Romeo & Juliet
+          Andri & Hani
         </h1>
         
         <div className="pt-8 space-y-3">

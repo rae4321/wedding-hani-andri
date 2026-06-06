@@ -18,7 +18,7 @@ export default function HeroSection() {
         {/* Elemen 2: Inisial Nama Besar (R & J) */}
         <div className="my-8 text-center">
           <h3 className="font-serif text-4xl text-amber-900/70 tracking-[0.2em] pl-4">
-            R <span className="text-xl font-sans font-light text-stone-400">&</span> J
+            A <span className="text-xl font-sans font-light text-stone-400">&</span> H
           </h3>
         </div>
 
@@ -55,7 +55,7 @@ export default function HeroSection() {
           />
         </div>
         <div className="space-y-1">
-          <h3 className="font-serif text-2xl text-stone-700 font-medium">Romeo Montague, S.Kom</h3>
+          <h3 className="font-serif text-2xl text-stone-700 font-medium">Andri</h3>
           <p className="text-xs text-stone-400 font-light">Putra dari Bapak Fulan & Ibu Fulanah</p>
         </div>
 
@@ -74,7 +74,7 @@ export default function HeroSection() {
           />
         </div>
         <div className="space-y-1">
-          <h3 className="font-serif text-2xl text-stone-700 font-medium">Juliet Capulet, S.T</h3>
+          <h3 className="font-serif text-2xl text-stone-700 font-medium">Hani</h3>
           <p className="text-xs text-stone-400 font-light">Putri dari Bapak Fulan & Ibu Fulanah</p>
         </div>
       </div>

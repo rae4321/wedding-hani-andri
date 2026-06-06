@@ -66,8 +66,7 @@ export default function Guestbook() {
   return (
     <section className="py-16 px-4 bg-white space-y-10">
       <div className="text-center space-y-2">
-        <h3 className="font-serif text-3xl text-stone-700">Buku Tamu</h3>
-        <span className="text-xs tracking-[0.2em] text-stone-400 uppercase block font-medium">Guestbook & RSVP</span>
+        <h3 className="font-serif text-3xl text-stone-700">Guestbook & RSVP</h3>
       </div>
 
       {/* Form Input */}
