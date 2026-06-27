@@ -7,13 +7,13 @@ const Footer = () => {
         
         {/* Teks Copyright */}
         <p className="text-sm opacity-50 text-stone-100">
-          &copy; {currentYear} <span className="font-medium">All Rights Reserved | Design by Rae Triadi</span>
+          &copy; {currentYear} <span className="font-sans">All Rights Reserved | Design by Rae Triadi</span>
         </p>
         
         {/* Ikon Link - Diberi warna putih solid agar kelihatan jelas */}
         <div className="flex items-center justify-center gap-4">
         <a 
-          href="https://portfoliorey-rho.vercel.app" 
+          href="https://rae-triadi.vercel.app" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-stone-100 hover:text-stone-500 opacity-50 transition-colors duration-300"

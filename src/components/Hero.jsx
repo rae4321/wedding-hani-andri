@@ -37,7 +37,7 @@ export default function HeroSection() {
       <div className="w-full max-w-sm mx-auto mb-16 bg-[#fdfbf7] rounded-[36px] shadow-lg overflow-hidden border border-stone-200/40 pb-10 z-10">
 
       <div className="my-8 text-center">
-          <h3 className="font-serif text-2xl text-stone-700 font-medium">We Are Getting Married</h3>
+          <h3 className="font-serif text-2xl text-stone-700 font-medium italic">We Are Getting Married</h3>
           <br />
           <p className="text-xs text-stone-500 leading-relaxed font-medium ">Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami:</p>
       </div>
