@@ -14,5 +14,5 @@ export const listbank = [
 import Kado1 from './assets/kado/kado.png';
 
 export const listKado = [
-    {id: 1, alamatKado: 'jl. Mawar No. 123, Jakarta', logo: Kado1}
+    {id: 1, alamatKado: 'Gg. Melati, RT. 01/RW 03, Purbalingga wetan', logo: Kado1}
 ];
