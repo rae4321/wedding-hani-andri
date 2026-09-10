@@ -5,7 +5,7 @@ export default function Cover({ guestName, onOpen }) {
       {/* ================= BACKGROUND FOTO UTUH ================= */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200" // Ganti pakai link foto prewedding pilihan lo
+          src="\cover.jpeg" 
           alt="Prewedding Background" 
           className="w-full h-full object-cover"
         />

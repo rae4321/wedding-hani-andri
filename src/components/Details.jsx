@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 export default function Details() {
   // Tentukan tanggal pernikahan (Format: YYYY-MM-DDTHH:mm:ss)
-  const TARGET_DATE = "2026-10-25T09:00:00";
+  const TARGET_DATE = "2026-10-13T09:00:00";
 
   const [timeLeft, setTimeLeft] = useState({
     hari: 0,
@@ -66,7 +66,7 @@ export default function Details() {
             {/* Bagian Waktu & Tanggal Acara */}
         <h2 className="font-serif text-2xl text-stone-700">Akad Nikah/Resepsi</h2>
         <span className="text-xs tracking-[0.2em] text-stone-500 uppercase font-medium">
-          Jumat, 25 Oktober 2026
+          Jumat, 13 Oktober 2026
         </span>
         <p className="text-sm text-stone-500 max-w-xs mx-auto">
           Pukul 09:00 WIB - Selesai <br />

@@ -8,7 +8,7 @@ export default function HeroSection() {
         {/* Elemen 1: Foto di Paling Atas */}
         <div className="w-full aspect-4/5 bg-stone-100 overflow-hidden rounded-t-[36px] rounded-b-2xl">
           <img 
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" 
+            src="\cover.jpeg" 
             alt="Prewedding" 
             className="w-lg h-full object-cover transition-transform duration-700 ease-out hover:scale-103"
             loading="lazy"
@@ -48,15 +48,15 @@ export default function HeroSection() {
         {/* Bagian Bawah Grid: Foto Utama (Arch Style) */}
         <div className="relative w-64 h-80 md:w-72 md:h-96 mx-auto rounded-t-full overflow-hidden border-4 border-stone-200/80 shadow-md bg-stone-100 group">
           <img 
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" 
+            src="/pria.jpeg" 
             alt="Prewedding" 
             className="w-full h-full object-cover transition-transform duration-700 ease-out scale-100 group-hover:scale-105"
             loading="lazy"
           />
         </div>
         <div className="space-y-1">
-          <h3 className="font-serif text-2xl text-stone-700 font-medium">Andri</h3>
-          <p className="text-xs text-stone-400 font-light">Putra dari Bapak Fulan & Ibu Fulanah</p>
+          <h3 className="font-serif text-2xl text-stone-700 font-medium">Andri Yulianto</h3>
+          <p className="text-xs text-stone-400 font-light">Putra Pertama Bapak Hermantoro & Ibu Taisah</p>
         </div>
 
         <span className="font-serif text-xl text-stone-400 block italic my-1">&</span>
@@ -67,15 +67,15 @@ export default function HeroSection() {
         {/* Bagian Bawah Grid: Foto Utama (Arch Style) */}
         <div className="relative w-64 h-80 md:w-72 md:h-96 mx-auto rounded-t-full overflow-hidden border-4 border-stone-200/80 shadow-md bg-stone-100 group">
           <img 
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" 
+            src="/wanita.jpeg" 
             alt="Prewedding" 
             className="w-full h-full object-cover transition-transform duration-700 ease-out scale-100 group-hover:scale-105"
             loading="lazy"
           />
         </div>
         <div className="space-y-1">
-          <h3 className="font-serif text-2xl text-stone-700 font-medium">Hani</h3>
-          <p className="text-xs text-stone-400 font-light">Putri dari Bapak Fulan & Ibu Fulanah</p>
+          <h3 className="font-serif text-2xl text-stone-700 font-medium">Nur Khanifah</h3>
+          <p className="text-xs text-stone-400 font-light">Putri Keempat Bapak Daryoko & Ibu Sugiarti</p>
         </div>
       </div>
 

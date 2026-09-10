@@ -3,13 +3,12 @@ import { i, image } from "framer-motion/client";
 export default image;
 
 import bank1 from './assets/bank/mandiri.png';
-import bank2 from './assets/bank/bca.png';
-import bank3 from './assets/bank/dana.png';
+import bank2 from './assets/bank/bni.png';
+
 
 export const listbank = [
-    {id: 1, tipe: 'Bank Mandiri', nomor: '157000xxxxxx', atasNama: 'Nama Mempelai Pria', logo: bank1},
-    {id: 2, tipe: 'Bank BCA', nomor: '8690xxxxxx', atasNama: 'Nama Mempelai Wanita', logo: bank2},
-    {id: 3, tipe: 'E-Wallet DANA / OVO', nomor: '081234567890', atasNama: 'Nama Mempelai', logo: bank3}
+    {id: 1, tipe: 'Bank Mandiri', nomor: '1220011501197', atasNama: 'Nur Khanifah', logo: bank1},
+    {id: 2, tipe: 'Bank BNI', nomor: '1827020271', atasNama: 'Andri Yulianto', logo: bank2},
 ];
 
 import Kado1 from './assets/kado/kado.png';

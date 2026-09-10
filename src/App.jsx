@@ -58,7 +58,7 @@ export default function App() {
         - public/assets/wedding-song.mp3 -> pakai src="/assets/wedding-song.mp3"
         - public/wedding-song.mp3        -> pakai src="/wedding-song.mp3"
       */}
-      <audio ref={audioRef} src="/wedding-song.mp3" loop preload="auto" />
+      <audio ref={audioRef} src="\DAYASMARA - WISNU JAYA Official Lirik Video.mp3" loop preload="auto" />
 
       {/* AnimatePresence mendeteksi komponen Cover saat melakukan animasi keluar (exit) */}
       <AnimatePresence>
