@@ -71,7 +71,7 @@ export default function TitleSection() {
           transition={{ duration: 1, delay: 0.6 }}
           className="font-sans text-xs md:text-sm font-medium tracking-[0.3em] text-[#C5A880] uppercase mt-6"
         >
-          25 . 10 . 2026
+          13 . 10 . 2026
         </motion.p>
 
       </div>
