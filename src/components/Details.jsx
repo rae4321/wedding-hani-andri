@@ -66,19 +66,18 @@ export default function Details() {
             {/* Bagian Waktu & Tanggal Acara */}
         <h2 className="font-serif text-2xl text-stone-700">Akad Nikah/Resepsi</h2>
         <span className="text-xs tracking-[0.2em] text-stone-500 uppercase font-medium">
-          Jumat, 13 Oktober 2026
+          Selasa, 13 Oktober 2026
         </span>
         <p className="text-sm text-stone-500 max-w-xs mx-auto">
           Pukul 09:00 WIB - Selesai <br />
-          <strong>Gedung Pernikahan Indah</strong> <br />
-          Jl. Kenangan Manis No. 12, Jakarta
-        </p>
+          <strong>Kediaman Mempelai Wanita</strong> <br />
+          Gg. Melati, RT. 01/RW 03, Purbalingga wetan </p>
       </div>
 
       {/* Tombol Interaktif Google Maps */}
       <div className="pt-2">
         <a 
-          href="https://maps.google.com" // Ganti dengan link share maps lokasi asli nanti
+          href="https://maps.app.goo.gl/wVJuzh7cTMeJbvuQA" // Ganti dengan link share maps lokasi asli nanti
           target="_blank" 
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-700 border border-stone-300 text-white rounded-xl text-xs font-semibold tracking-wide shadow-sm hover:bg-stone-800 transition-colors"
