@@ -1,10 +1,10 @@
 export default function Gallery() {
   // Array data foto (sementara pakai placeholder)
   const photos = [
-    "https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=400",
-    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=400",
-    "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=400",
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400"
+    "/g1.jpeg",
+    "/g2.jpeg",
+    "/g3.jpeg",
+    "/g4.jpeg"
   ];
 
   return (
