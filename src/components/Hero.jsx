@@ -18,7 +18,7 @@ export default function HeroSection() {
         {/* Elemen 2: Inisial Nama Besar (R & J) */}
         <div className="my-8 text-center">
           <h3 className="font-serif text-4xl text-amber-900/70 tracking-[0.2em] pl-4">
-            A <span className="text-xl font-sans font-light text-stone-400">&</span> H
+            H <span className="text-xl font-sans font-light text-stone-400">&</span> A
           </h3>
         </div>
 
