@@ -7,7 +7,7 @@ const Footer = () => {
         
         {/* Teks Copyright */}
         <p className="text-sm opacity-50 text-stone-100">
-          &copy; {currentYear} <span className="font-sans">All Rights Reserved | Developed by Rae Triadi</span>
+          &copy; {currentYear} <span className="font-sans">Developed by Rae Triadi</span>
         </p>
         
         {/* Ikon Link - Diberi warna putih solid agar kelihatan jelas */}

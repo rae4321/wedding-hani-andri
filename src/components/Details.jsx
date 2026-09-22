@@ -82,7 +82,8 @@ export default function Details() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-700 border border-stone-300 text-white rounded-xl text-xs font-semibold tracking-wide shadow-sm hover:bg-stone-800 transition-colors"
         >
-          Google Maps
+          <i className="ri-map-pin-line text-sm"></i>
+          Lihat Lokasi
         </a>
       </div>
 

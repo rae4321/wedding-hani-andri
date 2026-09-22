@@ -114,9 +114,9 @@ export default function Guestbook() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-3 bg-stone-700 hover:bg-stone-800 disabled:bg-stone-400 text-white rounded-xl text-xs font-semibold tracking-wider uppercase shadow-md transition-colors"
+          className="w-full py-3 bg-stone-700 hover:bg-stone-800 disabled:bg-stone-400 text-white rounded-xl text-xs font-semibold tracking-wider shadow-md transition-colors"
         >
-          {loading ? 'Mengirim...' : 'Kirim Ucapan'}
+          {loading ? <i className="ri-loader-4-line animate-spin text-lg"></i> : 'Kirim Ucapan'}
         </button>
       </form>
 
