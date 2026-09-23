@@ -8,6 +8,7 @@ import Gallery from './components/Gallery';
 import Gift from './components/Gift';
 import Footer from './components/Footer';
 import Title from './components/Title';
+//import Navbar from './components/Navbar';
 
 export default function App() {
   const [isOpened, setIsOpened] = useState(false);
@@ -71,7 +72,7 @@ export default function App() {
         if (window.innerHeight + window.scrollY < document.body.offsetHeight - 5) {
           startAutoScroll();
         }
-      }, 3000); // Jeda 3 detik setelah user selesai menyentuh layar
+      }, 5000); // Jeda 5 detik setelah user selesai menyentuh layar
     };
 
     // Daftarkan event listener untuk interaksi mouse, sentuhan HP, dan scroll
@@ -137,24 +138,27 @@ export default function App() {
       {isOpened && (
         <main id="main-content" className="w-full min-h-screen pb-24 animate-fade-in">
 
-          <div className="w-full max-w-md mx-auto bg-white shadow-xl">
+          {/* Floating Navbar */}
+          {/* <Navbar /> */}
+
+          <div id="hero" className="w-full max-w-md mx-auto bg-white shadow-xl">
             <Title />
-          </div>
-          
-          <div className="w-full max-w-md mx-auto bg-white shadow-xl">
             <Hero />
+          </div>
+
+          <div id="details" className="w-full max-w-md mx-auto bg-white shadow-xl">
             <Details />
           </div>
 
-          <div className="w-full bg-[#faf8f5]">
+          <div id="guestbook" className="w-full bg-[#faf8f5]">
             <Guestbook />
           </div>
 
-          <div className="w-full max-w-md mx-auto bg-white shadow-xl">
+          <div id="gift" className="w-full max-w-md mx-auto bg-white shadow-xl">
             <Gift />
           </div>
 
-          <div className="w-full max-w-md mx-auto bg-white shadow-xl">
+          <div id="gallery" className="w-full max-w-md mx-auto bg-white shadow-xl">
             <Gallery />
           </div>
 

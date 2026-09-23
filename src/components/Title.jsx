@@ -6,7 +6,7 @@ export default function TitleSection() {
       id="title-section" 
       className="relative w-full min-h-screen flex flex-col items-center justify-center px-8 overflow-hidden select-none bg-cover bg-center bg-stone-800 mask-b-from-100%"
       style={{ 
-        backgroundImage: `url('/bg-hero.png')` // Background batik jawa lo
+        backgroundImage: `url('/bg-hero.png')` // Background batik jawa
       }}
     >
 

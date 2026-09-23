@@ -64,15 +64,23 @@ export default function Guestbook() {
   };
 
   return (
-    <section className="py-16 px-4 bg-white space-y-10">
-      <div className="text-center space-y-2">
-        <h3 className="font-serif text-3xl text-stone-700 italic">Guestbook & RSVP</h3>
+    <section 
+      className="relative py-16 px-6 text-center space-y-12 bg-center bg-repeat-y border-y border-stone-200/60 overflow-hidden"
+      style={{ 
+        backgroundImage: "url('/bg-batik.jpeg')",
+        backgroundSize: '100% 100%', // Mengunci lebar background sesuai lebar container HP
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div className="text-center space-y-2 relative z-10">
+        <h3 className="font-serif text-3xl text-stone-800 italic drop-shadow-sm">Guestbook & RSVP</h3>
       </div>
 
       {/* Form Input */}
-      <form onSubmit={handleSubmit} className="max-w-sm mx-auto bg-[#faf8f5] p-6 rounded-2xl border border-stone-200/60 shadow-sm space-y-4">
+      <form onSubmit={handleSubmit} className="max-w-sm mx-auto bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-stone-200/70 shadow-sm space-y-4 relative z-10">
         <div className="flex flex-col text-left space-y-1">
-          <label className="text-xs font-semibold text-stone-600">Nama Tamu</label>
+          <label className="text-xs font-semibold text-stone-700">Nama Tamu</label>
           <input
             type="text"
             name="nama"
@@ -85,7 +93,7 @@ export default function Guestbook() {
         </div>
 
         <div className="flex flex-col text-left space-y-1">
-          <label className="text-xs font-semibold text-stone-600">Konfirmasi Kehadiran</label>
+          <label className="text-xs font-semibold text-stone-700">Konfirmasi Kehadiran</label>
           <select
             name="kehadiran"
             value={formData.kehadiran}
@@ -99,7 +107,7 @@ export default function Guestbook() {
         </div>
 
         <div className="flex flex-col text-left space-y-1">
-          <label className="text-xs font-semibold text-stone-600">Ucapan & Doa Restu</label>
+          <label className="text-xs font-semibold text-stone-700">Ucapan & Doa Restu</label>
           <textarea
             name="ucapan"
             value={formData.ucapan}
@@ -114,25 +122,25 @@ export default function Guestbook() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-3 bg-stone-700 hover:bg-stone-800 disabled:bg-stone-400 text-white rounded-xl text-xs font-semibold tracking-wider shadow-md transition-colors"
+          className="w-full py-3 bg-stone-800 hover:bg-stone-900 disabled:bg-stone-400 text-white rounded-xl text-xs font-semibold tracking-wider shadow-md active:scale-95 transition-all cursor-pointer"
         >
           {loading ? <i className="ri-loader-4-line animate-spin text-lg"></i> : 'Kirim Ucapan'}
         </button>
       </form>
 
       {/* Tabel / Daftar Ucapan Cloud */}
-      <div className="max-w-sm mx-auto space-y-4">
+      <div className="max-w-sm mx-auto space-y-4 relative z-10">
         <div className="flex justify-between items-center px-1">
-          <h4 className="text-xs font-bold text-stone-700">Daftar Ucapan ({comments.length})</h4>
+          <h4 className="text-xs font-bold text-stone-800">Daftar Ucapan ({comments.length})</h4>
         </div>
 
         <div className="space-y-3 max-h-96 overflow-y-auto pr-1">
           {comments.map((item) => (
-            <div key={item.id} className="p-4 bg-stone-50 border border-stone-200/50 rounded-xl space-y-2 text-left shadow-2xs">
+            <div key={item.id} className="p-4 bg-white/85 backdrop-blur-sm border border-stone-200/60 rounded-xl space-y-2 text-left shadow-xs">
               <div className="flex justify-between items-start gap-2">
                 <div>
                   <h5 className="text-sm font-semibold text-stone-800">{item.nama}</h5>
-                  <span className="text-[10px] text-stone-400">
+                  <span className="text-[10px] text-stone-500">
                     {item.created_at ? new Date(item.created_at).toLocaleDateString('id-ID') : '-'}
                   </span>
                 </div>
@@ -144,7 +152,7 @@ export default function Guestbook() {
                   {item.kehadiran}
                 </span>
               </div>
-              <p className="text-xs text-stone-600 leading-relaxed italic">"{item.ucapan}"</p>
+              <p className="text-xs text-stone-700 leading-relaxed italic">"{item.ucapan}"</p>
             </div>
           ))}
         </div>

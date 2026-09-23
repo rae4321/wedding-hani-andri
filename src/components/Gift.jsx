@@ -18,8 +18,15 @@ export default function Gift() {
   };
 
   return (
-    <section id="gift-section" className="w-full py-16 px-6 bg-stone-50 select-none text-center">
-      
+    <section id="gift-section" className="w-full py-16 px-6 bg-stone-50 select-none text-center"
+      style={{
+        backgroundImage: "url('/bg-batik.jpeg')",
+        backgroundSize: '100% 100%', // Mengunci lebar background sesuai lebar container HP
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+       }}
+    >
+
       {/* ================= HEADER JUDUL ================= */}
       <div className="space-y-2 mb-12">
         <h2 className="font-serif text-3xl text-stone-700 italic">Wedding Gift</h2>
